@@ -9,7 +9,7 @@
 import Foundation
 
 // Struct for hvad et rum kan indeholde
-struct Room{
+struct Car {
     var monster: Int
     var chest: Int
     var chestStar: Int
