@@ -14,7 +14,7 @@ let randomNumber = arc4random_uniform(101)
 
 var vundet: Bool = false
 
-print("Gæt et tal mellem 0 og 100 :-)")
+print("Gæt et tal mellem 0 og 100 - Begge tal inklusiv:-)")
 
 
 while forsøg > 0 {
