@@ -10,3 +10,4 @@ import Foundation
 
 var forsøg = 7
 
+var randomNumber = arc4random_Uniform(100)
