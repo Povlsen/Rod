@@ -18,7 +18,6 @@ print("Gæt et tal mellem 0 og 100 :-)")
 
 
 while forsøg > 0 {
-    
     let temp:String = readLine() ?? ""
     let int:Int = Int(temp) ?? 0
 
@@ -29,16 +28,15 @@ while forsøg > 0 {
     }
     else if int > randomNumber {
         print("Det er mindre end \(int)")
-        }
-
-    else {
+    } else {
         print("Det er større end \(int)")
-        }
+    }
+    
     forsøg -= 1
     print("Du har \(forsøg) forsøg tilbage")
 }
 
-if vundet{
+if vundet {
     print("Du har vundet")
 } else {
     print("Du har tabt")
