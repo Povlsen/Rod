@@ -1,44 +1,16 @@
-//
-//  main.swift
-//  Gæt et nummer
-//
-//  Created by Emil Jensen on 08/05/2018.
-//  Copyright © 2018 Emil Jensen, Nikolai Povlsen and Mikkel Norre Nielsen. All rights reserved.
-//
-
 import Foundation
-
-var forsøg = 7
-
 let randomNumber = arc4random_uniform(101)
-
-var vundet: Bool = false
-
 print("Gæt et tal mellem 0 og 100 - Begge tal inklusiv:-)")
+for i in stride(from: 7, to: 0, by: -1) { let int:Int = Int(readLine() ?? "") ?? 0
+    if int == randomNumber { print("Du har vundet")
+        break } else if int > randomNumber { print("Det er mindre end \(int), du har \(i-1) forsøg tilbage") } else { print("Det er større end \(int), du har \(i-1) forsøg tilbage") }
+    if (i-1 <= 0) { print("Du har tabt") } }
 
 
-while forsøg > 0 {
-    let temp:String = readLine() ?? ""
-    let int:Int = Int(temp) ?? 0
 
-    if int == randomNumber {
-        print("Najs - Godt gættet")
-        vundet = true
-        break
-    }
-    else if int > randomNumber {
-        print("Det er mindre end \(int)")
-    } else {
-        print("Det er større end \(int)")
-    }
-    
-    forsøg -= 1
-    print("Du har \(forsøg) forsøg tilbage")
-}
 
-if vundet {
-    print("Du har vundet")
-} else {
-    print("Du har tabt")
-}
-
+//let randomNumber = arc4random_uniform(101)
+print("Gæt et tal mellem 0 og 100 - Begge tal inklusiv:-)")
+for i in stride(from: 7, to: 0, by: -1) { let int:Int = Int(readLine() ?? "") ?? 0
+    if int == randomNumber { print("Du har vundet") } else if int > randomNumber { print("Det er mindre end \(int), du har \(i-1) forsøg tilbage") } else { print("Det er større end \(int), du har \(i-1) forsøg tilbage") }
+    if (i-1 <= 0) { print("Du har tabt") } else if int == randomNumber{ break} }
